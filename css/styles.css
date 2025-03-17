@@ -1,0 +1,277 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #212529 !important; /* Dark background */
+    color: white; /* Ensuring text is visible */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #1a1a1a; /* Dark gray */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 163, 26, 0.2);
+}
+
+/* Category Section */
+.category-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.category-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    background: #ffa31a; /* Pornhub Orange */
+    color: #000; /* Black text for contrast */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.category-toggle:hover {
+    background: #ff8700;
+}
+
+/* Product Card Layout */
+.product-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left: Name/Desc/Price | Right: Image/Qty/Cart */
+    align-items: center;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 163, 26, 0.2);
+    margin-bottom: 15px;
+    gap: 20px;
+}
+p.item-description,
+p.item-price,
+
+h3.item-name {
+    color: #fff !important; /* Force white text */
+}
+.quantity-display {
+    color: #fff; /* White text */
+    font-weight: bold;
+}
+
+/* Left Side: Name, Description, Price */
+.product-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffa31a; /* Pornhub Orange */
+}
+
+.product-info .product-description {
+    font-size: 0.95rem;
+    color: #ddd; /* Light gray text */
+    line-height: 1.4;
+}
+
+.product-info .product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    margin-top: 5px;
+}
+
+/* Right Side: Image, Quantity, Cart */
+.product-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-image img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ffa31a;
+}
+
+/* Quantity Section */
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #333;
+    border: 1px solid #ffa31a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white; /* White text */
+}
+
+.quantity-btn:hover {
+    background-color: #ff8700;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #ffa31a;
+    color: #000; /* Black text for contrast */
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff8700;
+}
+
+/* Cart Sidebar - Dark Theme with Pornhub Colors */
+#cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;  /* Start off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: #1a1a1a; /* Dark Gray */
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(255, 163, 26, 0.3);
+    transition: right 0.3s ease-in-out; /* Smooth sliding animation */
+    border-left: 3px solid #ffa31a;
+}
+
+#cart-sidebar.active {
+    right: 0; /* Slide in */
+}
+
+/* Cart Header */
+#cart-sidebar h2 {
+    color: #ffa31a; /* Pornhub Orange */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cart-sidebar h2 img {
+    width: 25px; /* Adjusting icon size */
+}
+
+/* Cart Close Button */
+#cart-sidebar .close-cart {
+    background: #ff8700;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+}
+
+#cart-sidebar .close-cart:hover {
+    background: #ffa31a;
+}
+
+/* Cart Total */
+#cart-sidebar .cart-total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    margin: 15px 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Checkout Button */
+#cart-sidebar .checkout-btn {
+    background-color: #ffa31a;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#cart-sidebar .checkout-btn:hover {
+    background: #ff8700;
+}
+
+/* Empty Cart Message */
+#cart-sidebar .empty-cart {
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 20px;
+}
+/* Fixing Cart Sidebar Theme */
+#cart-sidebar {
+    background-color: #1a1a1a !important; /* Dark Background */
+    color: white !important; /* White Text */
+    border-left: 3px solid #ffa31a; /* Orange Border */
+}
+
+/* Checkout Button */
+#cart-sidebar .checkout-btn {
+    background-color: #ffa31a !important;
+    color: #000 !important; /* Black text for contrast */
+}
+
+#cart-sidebar .checkout-btn:hover {
+    background: #ff8700 !important;
+}
+
+/* Cart Header */
+#cart-sidebar h2, #cart-sidebar .cart-total {
+    color: #ffa31a !important; /* Orange Text */
+}
+
+/* Close Button */
+#cart-sidebar .close-cart {
+    background: #ff8700 !important;
+    color: #000 !important;
+}
+
+#cart-sidebar .close-cart:hover {
+    background: #ffa31a !important;
+}
+#search-box {
+    width: 300px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    font-size: 14px; /* Adjust font size */
+    padding: 5px 10px; /* Adjust padding */
+    display: block;
+    margin: 0 auto; /* Centers horizontally */
+}

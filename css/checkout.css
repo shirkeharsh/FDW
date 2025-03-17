@@ -1,0 +1,237 @@
+/* Prevents full-page scrolling when overlay is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Checkout Overlay (Popup Background) */
+.checkout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Checkout Content Box (Popup) */
+.checkout-content {
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Show animation */
+.checkout-overlay.show .checkout-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Checkout Cart Container */
+#checkout-cart-container {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Cart Item Styling */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* View More Items Button */
+.view-more-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+    background: #0056b3;
+}
+
+/* Hidden extra items */
+.extra-items {
+    display: none;
+}
+
+/* Checkout Form */
+#checkout-form {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Form Layout */
+#checkout-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#checkout-form .form-group {
+    flex: 1 1 48%;
+}
+
+/* Labels & Inputs */
+#checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#checkout-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+    box-sizing: border-box;
+}
+
+#checkout-form input:focus {
+    border-color: #007bff;
+}
+
+/* Buttons */
+#checkout-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+#checkout-form button:hover {
+    background: #218838;
+}
+
+/* Close Button */
+#close-checkout, #close-full-cart {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+#close-checkout:hover, #close-full-cart:hover {
+    background: #c82333;
+}
+
+/* Full Cart Popup */
+.cart-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1100;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+    .checkout-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #checkout-form .form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #checkout-form .form-group {
+        flex: 1 1 100%;
+    }
+
+    #checkout-form input, #checkout-form button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
+ /* Button Styling */
+#view-coupons {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+#view-coupons:hover {
+    background: #0056b3;
+}
+
+/* Textarea for Delivery Instructions */
+#delivery-instructions {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#delivery-instructions:focus {
+    border-color: #007bff;
+}

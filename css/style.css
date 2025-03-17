@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f2937; /* Dark background */
+    color: #e5e7eb; /* Light text for better contrast */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disables both vertical and horizontal scroll */
+    height: 100vh; /* Ensures the body takes up the full height */
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #2d3748; /* Dark gray background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Container for content */
+.p-6 {
+    padding: 24px;
+    background-color: #2d3748; /* Dark background */
+    border-radius: 8px;
+}
+
+/* Styling for each section (wallet balance, total, etc.) */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-green-500 {
+    color: #48bb78; /* Green color for savings text */
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+
+.bg-blue-500 {
+    background-color: #3b82f6;
+}
+
+.bg-green-500 {
+    background-color: #10b981;
+}
+
+.bg-red-500 {
+    background-color: #ef4444;
+}
+
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.bg-blue-600:hover {
+    background-color: #2563eb;
+}
+
+.bg-green-600:hover {
+    background-color: #059669;
+}
+
+.bg-red-600:hover {
+    background-color: #dc2626;
+}
+
+.bg-gray-400:hover {
+    background-color: #d1d5db;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+/* Input Fields */
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #4a5568; /* Darker input field background */
+    color: #121212; /* Dark text for input */
+    border: 1px solid #4a5568;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6; /* Focus border color */
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: #e5e7eb; /* Placeholder color */
+}
+
+/* Dropdown & Menu Styles */
+.dropdown-content {
+    display: none;
+    background-color: #edf2f7; /* Light background for dropdowns */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown-content p {
+    cursor: pointer;
+    padding: 8px;
+    margin: 0;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content p:hover {
+    background-color: #f3f4f6; /* Hover effect for items */
+}
+
+.hidden {
+    display: none;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Cart Item Container */
+#cartItems {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+}
+
+.border-b {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.p-2 {
+    padding: 8px;
+}
+
+/* Payment Method & Order Notes */
+#payment-method, #order-notes {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    padding: 12px;
+    background-color: #4a5568;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    color: #e5e7eb;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Special focus styling for buttons */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 16px;
+    }
+
+    .p-6 {
+        padding: 16px;
+    }
+
+    .text-lg {
+        font-size: 1rem;
+    }
+}
